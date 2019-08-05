@@ -1,0 +1,4 @@
+<h2> Title : <%= Gossip.find(@id).title %> </h2>
+<h6>  Creare on <%= Gossip.find(@id).created_at.strftime("%d/%m/%Y")%></h6>
+<p> Pubic by : <%= User.find(Gossip.find(@id).user_id).first_name %></p>
+<h5> Content : <%= Gossip.find(@id).content %> </h5> 
