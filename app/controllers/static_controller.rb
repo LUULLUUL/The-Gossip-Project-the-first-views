@@ -18,6 +18,7 @@ class StaticController < ApplicationController
   def user 
     @users = User.all 
     @id = params[:id]
+
   end  
 
 end

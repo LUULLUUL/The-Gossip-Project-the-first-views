@@ -1,2 +1,14 @@
-<h2>Here is the user :  <%= @first_name %> </h2>
+<h2>Here is the user : <%= User.find(Gossip.find(@id).user_id).first_name%> <%= User.find(Gossip.find(@id).user_id).last_name%> </h2>
+
+<p>
+      Description :
+      <%= User.find(Gossip.find(@id).user_id).description%><br/><br/>
+      <%= User.find(Gossip.find(@id).user_id).email%><br/>
+      <%= User.find(Gossip.find(@id).user_id).age%>years<br/>
+      <%= User.find(Gossip.find(@id).user_id).city.name%> <br/>
+</p>
+
+
+
+
 

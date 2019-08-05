@@ -1,10 +1,18 @@
-<h1>Welcome, <%= @first_name%> </h1>
-<% @gossips.each_with_index do |gossip,index| %>
-  <h3><%= User.find(gossip.user_id).first_name %></h3>
-  <h5><%= gossip.title%></h5>
-  <a href="http://localhost:3000/gossip/<%=gossip.id%>">Link</a>
+<h1>Welcome <%= @first_name%> </h1>
 
-<%end%>  
+<div class="d-flex align-content-around flex-wrap">
+
+<% @gossips.each_with_index do |gossip,index| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h3><%= User.find(gossip.user_id).first_name %></h3>
+      <h5><%= gossip.title%></h5>
+      <a href="http://localhost:3000/gossip/<%=gossip.id%>">Link</a>
+    </div>
+  </div>
+<%end%>
+
+</div>
 
 
 
